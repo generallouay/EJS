@@ -1,0 +1,27 @@
+{
+  "name": "working-with-ejs",
+  "version": "1.0.0",
+  "description": "currently no description",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/generallouay/EJS.git"
+  },
+  "author": "louay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/generallouay/EJS/issues"
+  },
+  "homepage": "https://github.com/generallouay/EJS#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}

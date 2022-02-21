@@ -1,0 +1,5 @@
+EJS stands for embeded javascript
+
+in express res.sendFile() to send an HTML template as a response
+
+ejs is a template engine which allows me to render a javascript code in an HTML page
