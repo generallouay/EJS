@@ -12,6 +12,7 @@ const dataArray = JSON.parse(dataFile);
 
 
 
+app.set('views', p.join(__dirname,'templates'))
 
 // telling express about the view engine
 app.set('view engine', 'ejs')
