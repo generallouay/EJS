@@ -10,9 +10,9 @@ const dataFilePath = p.join(__dirname,'data.json')
 const dataFile = fs.readFileSync(dataFilePath)
 const dataArray = JSON.parse(dataFile);
 
+ 
 
-
-app.set('views', p.join(__dirname,'templates'))
+app.set('templates', p.join(__dirname,'templates'))
 
 // telling express about the view engine
 app.set('view engine', 'ejs')
@@ -21,9 +21,8 @@ app.use(express.static('public'))
 app.use(urlencoded({extended:false}))
 
 app.get('/', (req , res) => {
-    const file = p.join(__dirname, 'templates' , 'idx.html')
 
-    res.sendFile(file)
+    res.render('idx')
      
 })
 app.get('/abc',(req,res)=>{
@@ -38,12 +37,13 @@ app.post('/abc',(req,res)=>{
 
 }) 
 app.get('/thumbsup', (req , res) => {
-    res.send('<h1>success</h1>')
+    res.render('success')
 })
 
 app.get('/people',(req,res)=>{
-    const filePath = p.join(__dirname,'templates','display.html')
-    const file = fs.readFileSync(filePath,'utf-8')
+
+    res.render('display',{howManyPpl:dataArray.length,
+    people:dataArray})
     
 })
 

@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <p>here</p>
+    <p> there is <%=howManyPpl%></p>
     <ul class="main-ul">
-       
+       <%for(i of people){%>
+        <li><%=i.name%> <span><%=i.age%></span></li>
+       <%}%>
     </ul>
+    <button><a href="/">back</a></button>
 </body>
 </html>
